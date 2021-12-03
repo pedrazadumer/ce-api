@@ -9,13 +9,15 @@ from sklearn import svm
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
+from flask_cors import CORS
 
 
 app = Flask(__name__)
 api = Api(app)
+cors = CORS(app, resources={r"/loan-recovery/predict": {"origins": "*"}})
 
 class LoanRecoveryResource(Resource):
-    
+
     def post(self):
         contactChannels = {
           0: 'Telefono',
