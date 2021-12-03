@@ -21,3 +21,4 @@ docker-compose up --build
 ```
 
 Para documentación sobre los recursos disponibles a través de la API: [CE API](./ce-api)
+Para documentación sobre la WebUI: [CE UI](./ce-ui)

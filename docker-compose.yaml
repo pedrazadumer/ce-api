@@ -1,7 +1,41 @@
 version: "3.9"
-
 services:
   ce-api:
+    container_name: "ce-api"
     build: ce-api
     ports:
       - "5000:5000"
+    networks:
+      ce_network:
+        aliases:
+          - ce-api
+  ce-ui:
+    container_name: "ce-ui"
+    depends_on:
+      - "ce-api"
+    build: ce-ui
+    ports:
+      - "3000:3000"
+    environment:
+      - "REACT_APP_CE_API_URL=http://localhost:5000"
+    networks:
+      ce_network:
+        aliases:
+          - ce-ui
+  ce-proxy:
+    container_name: "ce-proxy"
+    depends_on:
+      - "ce-ui"
+    build: ce-proxy
+    ports:
+      - "80:80"
+    networks:
+      ce_network:
+        aliases:
+          - ce-proxy
+networks:
+  ce_network:
+    name: ce_net
+    driver: bridge
+    ipam:
+      driver: default
