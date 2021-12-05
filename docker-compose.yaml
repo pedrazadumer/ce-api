@@ -1,5 +1,12 @@
 version: "3.9"
 services:
+  ce-db:
+    build: ce-db
+    container_name: "ce-db"
+    ports:
+      - "3306:3306"
+    environment:
+      - "MYSQL_ROOT_PASSWORD=root"
   ce-api:
     container_name: "ce-api"
     build: ce-api
@@ -18,6 +25,7 @@ services:
       - "3000:3000"
     environment:
       - "REACT_APP_CE_API_URL=http://localhost:5000"
+      - "REACT_APP_BORROWERS_API_URL=http://localhost:8080"
     networks:
       ce_network:
         aliases:
@@ -33,6 +41,19 @@ services:
       ce_network:
         aliases:
           - ce-proxy
+  ce-borrowers-api:
+    build: ce-borrowers-api
+    container_name: "ce-borrowers-api"
+    ports:
+      - "8080:8080"
+    environment:
+      - "JAVA_OPTS=-Dspring.datasource.url=jdbc:mariadb://ce-db:3306/CE"
+    depends_on:
+      - ce-db
+    networks:
+      ce_network:
+        aliases:
+          - ce-borrowers-api
 networks:
   ce_network:
     name: ce_net
