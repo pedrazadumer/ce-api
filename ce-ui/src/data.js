@@ -1,11 +1,11 @@
 export const labelResponse = [
     {
-        key: "recoveryRate",
-        value: "Índice de recuperación"
+        key: "idNumber",
+        value: "Número de Identificación"
     },
     {
-        key: "bestContactChannel",
-        value: "Canal de contacto"
+        key: "contactability",
+        value: "Contactabilidad"
     }
 ]
 
