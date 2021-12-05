@@ -1,4 +1,4 @@
-## CE Apps
+## \[Fines Académicos\] CE Apps
 
 ### Resumen
 Componentes que soportan la cobranza estratégica con base en técnicas de Machine Learning.

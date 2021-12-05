@@ -1,4 +1,4 @@
-## CE API
+## \[Fines Académicos\] CE API
 
 ### Resumen
 API implementada en Python + Flask-Restful, responsable de consumir los modelos de ML para realizar las predicciones sobre la probabilidad de recuperación de la deuda, así como el mejor canal de contacto para favorecer la recuperación de la misma.
