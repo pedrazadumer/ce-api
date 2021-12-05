@@ -35,7 +35,7 @@ class LoanRecoveryResource(Resource):
         #data = data.reshape(1, -1)
         #prediction = model.predict(data)
         
-        response = {'recoveryRate': 0.8456, 'bestContactChannel': contactChannels[1]}
+        response = {'idNumber': 1234567, 'contactability': 'TO-DO: ¿Un ejemplo?'}
         
         return response, 200
 

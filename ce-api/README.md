@@ -29,7 +29,7 @@ http://localhost:5000/loan-recovery/predict
 **Respuesta de ejemplo:**
 ```
 {
-    "recoveryRate": 0.8456,
-    "bestContactChannel": "Email"
+    "idNumber": 1234567,
+    "contactability": "TO-DO: ¿Un ejemplo de este valor?"
 }
 ```
