@@ -1,7 +1,7 @@
 ## \[Fines Académicos\] Microservicio de Clientes
 
 ### Resumen
-API implementada en Java + SpringBoot + Spring WebMVC, responsable de administrar los detalles de los deudores en la base de datosde deudores construida sobre MariaDB.
+API implementada en Java 8 + SpringBoot + Spring WebMVC, responsable de administrar los detalles de los deudores en la base de datos de deudores construida sobre MariaDB.
 
 ### Especificación
 
