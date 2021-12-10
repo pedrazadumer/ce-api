@@ -30,12 +30,13 @@ class LoanRecoveryResource(Resource):
         
         args = parser.parse_args()
         
-        #model = load('models/svc_sigmoid_cvd.joblib')
-        #data = np.array([63.0,1.0,1.0,145.0,233.0,1.0,2.0,150.0,0.0,2.3,3.0,0.0,6.0])
-        #data = data.reshape(1, -1)
-        #prediction = model.predict(data)
+        # model = load('models/svc_sigmoid_cvd.joblib')
+        # prediction = model.predict(args['data'])
+        # ================================================================================================================
+        # Dados los problemas con el modelo actual, a continuacion se plantean datos Mock hasta que se ajusten los modelos.
+        # ================================================================================================================
         
-        response = {'idNumber': 1234567, 'contactability': 'TO-DO: ¿Un ejemplo?'}
+        response = {'idNumber': 1234567, 'contactability': 'CONTACTO TERCEROS'}
         
         return response, 200
 
